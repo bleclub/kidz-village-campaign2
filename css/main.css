@@ -1249,7 +1249,7 @@ header .row {
 header .header-logo {
   position: absolute;
   right: 32px;
-  top: 42px;
+  top: 32px;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
@@ -1490,15 +1490,32 @@ header .header-logo a {
  * header section 
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
+
   header .header-logo a {
-    width: 51px;
-    height: 24px;
-    background-size: 51px 24px;
+      width: 150px;
+      height: 156px;
+      background-size: 150px 156px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header .header-logo a {
+      width: 100px;
+      height: 103px;
+      background-size: 100px 103px;
+      margin: 0px;
+      float: right;
   }
 }
 @media only screen and (max-width: 400px) {
+ 
   #header-menu-trigger .header-menu-text {
     display: none;
+  }
+
+  header .header-logo {
+    position: absolute;
+    right: 20px;
+    top: 40px;
   }
 }
 
@@ -1548,6 +1565,7 @@ header .header-logo a {
   position: relative;
   padding-top: 16.2rem;
   padding-bottom: 15rem;
+  padding-right: 100px;
 }
 .home-content-tablecell h3 {
   font-family: "montserrat-bold", sans-serif;
@@ -1674,12 +1692,27 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * responsive:
  * home section 
  * ------------------------------------------------------------------- */
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
   .home-content-tablecell h3 {
     font-size: 2.1rem;
   }
   .home-content-tablecell h1 {
     font-size: 7rem;
+  }
+
+  .home-content-tablecell .row {
+      position: relative;
+      padding-top: 0;
+      padding-bottom: 150px;
+      padding-right: 100px;
+  }
+
+  header .header-logo {
+    top: 20px;
+    right: 20px;
+  }
+  .scrolldown {
+    bottom: 200px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -1692,8 +1725,9 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 @media only screen and (max-width: 768px) {
   .home-content-tablecell .row {
-    max-width: 600px;
-  }
+    max-width: 100%;
+    padding: 0;
+}
   .home-content-tablecell h3 {
     font-size: 1.8rem;
   }
@@ -1702,6 +1736,11 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   }
   .home-content-tablecell h1 br {
     display: none;
+  }
+
+  .home-content-tablecell .col-six {
+      width: 65%;
+      padding: 0px 50px 0 0;
   }
 
   .home-social-list {
@@ -1715,13 +1754,32 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 
   .scrolldown .scroll-icon {
     font-size: 1.2rem;
-    top: 24px;
-    right: 10px;
+    top: 0;
+    right: 0;
   }
 }
 @media only screen and (max-width: 600px) {
   #home {
     min-height: 702px;
+    background-position: -420px;
+    z-index: 10;
+    background-attachment: unset;
+  }
+  .scrolldown{
+    bottom: 120px;
+  }
+
+  .scrolldown .scroll-icon {
+    font-size: 14px;
+    top: auto;
+    right: 0;
+    padding: 10px 20px;
+    letter-spacing: 0;
+  }
+
+  .home-content-tablecell .col-six {
+      width: 70%;
+      padding: 0px 20px 0 0;
   }
 
   .home-content-tablecell .row {
@@ -1758,12 +1816,17 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 @media only screen and (max-width: 400px) {
   #home {
-    min-height: 654px;
+      min-height: 654px;
+      background-position: -375px;
   }
-
+  .home-content-tablecell .col-six {
+    width: 70% !important;
+    padding: 0px 20px 0 0;
+    float: right !important;
+}
   .home-content-tablecell .row {
-    padding-top: 4.8rem;
-    padding-bottom: 10.8rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .home-content-tablecell h3 {
     font-size: 1.4rem;
@@ -1809,7 +1872,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 
 #about h2 {
   text-transform: uppercase;
-  font-size: 54px;
+  font-size: 4rem;
   color: #774d2a;
   text-align: left;
 }
@@ -1946,10 +2009,21 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * responsive:
  * about 
  * ------------------------------------------------------------------- */
+ @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+   #about{
+      padding: 80px 50px;
+   }
+ }
+ 
 @media only screen and (max-width: 1024px) {
   #about {
-    min-height: 636px;
+    min-height: 900px;
+    padding: 80px 50px;
+}
+  #about p{
+    font-size: 16px;
   }
+
   #about .about-wrap {
     max-width: 800px;
   }
@@ -1958,6 +2032,10 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   }
 }
 @media only screen and (max-width: 900px) {
+  #about {
+      min-height: 90%;
+      padding: 80px 20px;
+  }
   #about .about-wrap {
     max-width: 720px;
   }
@@ -1966,8 +2044,21 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   }
 }
 @media only screen and (max-width: 768px) {
+
+  #about h2{
+    font-size: 28px;
+  }
   #about h3 {
-    font-size: 1.7rem;
+    font-size: 26px;
+    line-height: 40px;
+}
+#about button.submitform{
+  font-size: 16px;
+  width: 40%;
+  height: 40px;
+}
+  #about p br {
+      display: none;
   }
   #about .about-wrap {
     max-width: 600px;
@@ -1978,7 +2069,11 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 @media only screen and (max-width: 600px) {
   #about {
-    min-height: auto;
+      min-height: auto;
+      padding: 50px 15px 200px;
+      position: relative;
+      float: left;
+      z-index: 9;
   }
   #about .about-wrap {
     max-width: 500px;
@@ -1990,15 +2085,18 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 @media only screen and (max-width: 500px) {
   #about h3 {
-    font-size: 1.5rem;
+    font-size: 26px;
   }
   #about .lead {
-    font-size: 2.5rem;
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 400px) {
+  
   #about {
-    padding: 4.2rem 0 9.6rem;
+  
+      padding: 50px 20px 200px;
+  
   }
   #about .about-wrap {
     max-width: 380px;
@@ -2118,6 +2216,12 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * services
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
+  #services {
+      padding: 0 50px 50px;
+      margin-top: -50px;
+      min-height: 700px;
+  }
+
   #services .services-list .service-item {
     padding: 0 40px;
   }
@@ -2129,7 +2233,21 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 @media only screen and (max-width: 768px) {
   #services {
-    padding: 12rem 0 12rem;
+      padding: 0 20px 100px;
+      min-height: 70%;
+      background-position: -900px;
+      z-index: 11;
+  }
+  #services h3{
+    font-size: 28px;
+  }
+
+  #services h4{
+    font-size: 22px;
+  }
+
+  #services p{
+    font-size: 16px;
   }
   #services .services-content {
     max-width: 550px;
@@ -2147,6 +2265,15 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   }
   #services .services-list .icon i {
     font-size: 5rem;
+  }
+
+  #services {
+      padding: 0 20px 200px;
+      min-height: 100%;
+      z-index: 11;
+      float: left;
+      background-size: 750px;
+      background-position: bottom right;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -2408,7 +2535,14 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
   #portfolio .intro-wrap {
-    padding: 12rem 0 21rem;
+      padding: 80px 0 80px;
+  }
+
+  #portfolio .section-intro h3{
+    font-size: 28px;
+  }
+  #portfolio .section-intro .lead{
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -2416,10 +2550,17 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
     float: none;
     width: 100%;
   }
+  .section-intro.with-bottom-sep{
+    padding-bottom: 0;
+  }
 
   .bricks-wrapper .item-wrap .item-text .folio-title {
     font-size: 2rem;
     line-height: 1.5;
+  }
+  #portfolio .intro-wrap {
+      padding: 80px 0 0px;
+      float: left;
   }
 }
 
@@ -2972,6 +3113,9 @@ footer {
   color: rgba(255, 255, 255, 0.4);
   text-align: center;
   border-top: 10px solid #fdc43f;
+  position: relative;
+  background: #fff;
+  z-index: 10;
 }
 
 footer h3 {
@@ -3157,6 +3301,7 @@ footer h4.h05::after {
 
   .footer-main {
     text-align: center;
+    padding: 20px;
   }
   .footer-main .row {
     max-width: 480px;
@@ -3174,6 +3319,16 @@ footer h4.h05::after {
     left: 50%;
     margin-left: -50px;
   }
+
+  footer h3{
+    font-size: 28px;
+  }
+  footer p{
+    font-size: 16px;
+  }
+  footer .kidz-logo{
+    width: 80px;
+  }
 }
 @media only screen and (max-width: 600px) {
   .footer-bottom {
@@ -3184,5 +3339,8 @@ footer h4.h05::after {
   }
   .footer-bottom .copyright span::after {
     display: none;
+  }
+  footer p br {
+      display: none;
   }
 }

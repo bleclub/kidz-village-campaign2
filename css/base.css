@@ -493,6 +493,7 @@ textarea {
 
   [class*="col-"] {
     padding: 0 10px;
+    width: 100%;
   }
 
   .mob-1-4 {
@@ -572,6 +573,15 @@ textarea {
 .block-1-3 .bgrid:nth-child(3n+1),
 .block-1-2 .bgrid:nth-child(2n+1) {
   clear: both;
+}
+
+
+.visible-xs{
+  display: none !important;
+}
+
+.hidden-xs{
+  display: block !important;
 }
 
 /* ------------------------------------------------------------------- 
@@ -681,6 +691,13 @@ textarea {
   .block-mob-1-2 .bgrid:nth-child(2n+1) {
     clear: both;
   }
+  .visible-xs{
+    display: block !important;
+  }
+
+  .hidden-xs{
+    display: none !important;
+  }
 }
 /* ------------------------------------------------------------------- 
  * stack on small mobile devices - (_grid.scss)
@@ -785,4 +802,5 @@ textarea {
 
 .no-padding-right{
   padding-right: 0;
+
 }
