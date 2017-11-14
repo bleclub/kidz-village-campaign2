@@ -48,64 +48,25 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98995672-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-98995672-3');
+	</script>
+
 </head>
 
 <body id="top">
 
 	<!-- header 
    ================================================== -->
-   <header> 
-
-   	<div class="header-logo"  title="Kidz Learning Centre by Kidz Village">
-	      <a href="index.html" title="Kidz Learning Centre by Kidz Village">Kidz Learning Centre by Kidz Village</a>
-	   </div> 
-
-		<!-- <a id="header-menu-trigger" href="#0">
-		 	<span class="header-menu-text">Menu</span>
-		  	<span class="header-menu-icon"></span>
-		</a> 
-
-		<nav id="menu-nav-wrap">
-
-			<a href="#0" class="close-button" title="close"><span>Close</span></a>	
-
-	   	<h3>Infinity.</h3>  
-
-			<ul class="nav-list">
-				<li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
-				<li><a class="smoothscroll" href="#about" title="">About</a></li>
-				<li><a class="smoothscroll" href="#services" title="">Services</a></li>
-				<li><a class="smoothscroll" href="#portfolio" title="">Works</a></li>
-				<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>						
-			</ul>	
-
-			<p class="sponsor-text">
-				Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost</a>.
-				Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>. 
-				
-			</p>			
-
-			<ul class="header-social-list">
-	         <li>
-	         	<a href="#"><i class="fa fa-facebook-square"></i></a>
-	         </li>
-	         <li>
-	         	<a href="#"><i class="fa fa-twitter"></i></a>
-	         </li>
-	         <li>
-	         	<a href="#"><i class="fa fa-instagram"></i></a>
-	         </li>
-            <li>
-            	<a href="#"><i class="fa fa-behance"></i></a>
-            </li>
-	         <li>
-	         	<a href="#"><i class="fa fa-dribbble"></i></a>
-	         </li>	         
-	      </ul>		
-
-		</nav>   -->
-		<!-- end #menu-nav-wrap -->
-
+   	<header> 
+		<div class="header-logo"  title="Kidz Learning Centre by Kidz Village">
+			<a href="index.html" title="Kidz Learning Centre by Kidz Village">Kidz Learning Centre by Kidz Village</a>
+		</div> 
 	</header> <!-- end header -->  
 
 
@@ -200,11 +161,12 @@
 			</div>
 			
 			<div class="col-five">
-				<h3>ลงทะเบียนเรียน</h3>
-				<p>พิเศษสำหรับผู้ปกครองที่สนใจลงทะเบียนเรียน <br>ก่อนวันที่ 31 ตุลาคม รับสิทธิพิเศษลดค่าเรียน 10%</p>
+				<h3>ลงทะเบียน</h3>
+				<p>รับสิทธิ์ร่วมโปรแกรมทดลองเรียน FREE ! กรุณาลงทะเบียนเพื่อรับข้อมูลเพิ่มเติม</p>
+				<p>พิเศษต่อที่ 2 ! รับส่วนลดทันที 10% เมื่อสมัครเรียนภายในวันที่ 30 พฤศจิกายน 2560</p>
 				
 				<!-- form -->
-				<form name="contactForm" id="contactForm" method="post">     			
+				<form name="contactForm" id="contactForm" action="retURL/?do=process" method="post">     			
 						
 					<div class="form-field">
 							<input name="contactName" type="text" id="contactName" placeholder="ชื่อ - นามสกุล" value="" minlength="2" required="">
@@ -216,8 +178,7 @@
 					<div class="form-field">
 						<input name="contactPhone" type="text" id="contactSubject" placeholder="เบอร์โทรศัพท์" required="" value="">
 					</div>		     				   
-					
-												
+										
 					<div class="form-field">
 						<select name="contactCourse" required="">
 							<option value="">คอร์สที่สนใจ</option>
