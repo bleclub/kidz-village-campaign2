@@ -1,5 +1,5 @@
 <?php
-require("../PHPMailer/class.phpmailer.php");
+require("./PHPMailer/class.phpmailer.php");
 
 $do = $_REQUEST['do'];
 switch($do) {
@@ -8,7 +8,7 @@ switch($do) {
 	$email = $_POST['email'];
 	$fullname = $_POST['fullname'];
 	$phone = $_POST['phone'];
-	$course = $_POST['course'];
+	$campaign = $_POST['utm_campaign'];
 	$utm_source = $_POST['utm_source'];
 
 	if($_POST['utm_source'] == ""){ 
@@ -58,20 +58,20 @@ switch($do) {
 		{
 			
 			$naamgeadresseerde = "Administrator - Kidz Village";
-			$emailadres = "info@kidz-village.ac.th";
+			$emailadres = "webmaster@bigfans.io";
 			//verstuur nieuwsbrief
 			$mail = new PHPMailer();
 			$mail->IsSMTP(true);         
 			$mail->CharSet = "utf-8";  // ในส่วนนี้ ถ้าระบบเราใช้ tis-620 หรือ windows-874 สามารถแก้ไขเปลี่ยนได้                        
 			$mail->SMTPDebug = 0;
 			$mail->SMTPAuth = true;
-			$mail->Host     = "mail.kidz-village.ac.th"; //  mail server ของเรา
+			$mail->Host     = "mail.bigfans.io"; //  mail server ของเรา
 			$mail->Port = 25; // พอร์ท
-			$mail->Username = "info@kidz-village.ac.th"; // account SMTP
-			$mail->Password = "QjjdyHO5"; // รหัสผ่าน SMTP
+			$mail->Username = "webmaster@bigfans.io"; // account SMTP
+			$mail->Password = "8lYlkG4W@nDp1z"; // รหัสผ่าน SMTP
 			// Geef aan dat het een HTML mail betreft
 			$mail->IsHTML(true);
-			$mail->AddReplyTo($email_cus, $name);
+			$mail->AddReplyTo("no-reply@kidz-village.ac.th", "No Reply - Kidz-Village");
 			$mail->SetFrom($emailadres,$naamgeadresseerde);
 			
 			
@@ -103,18 +103,18 @@ switch($do) {
 		$msg_dm = $msg_dm.'Name: '.$fullname.'<br>';
 		$msg_dm = $msg_dm.'Email: <a href="mailto:'.$email.'">'.$email.'</a><br>';
 		$msg_dm = $msg_dm.'Telephone: '.$phone.'<br>';
-		$msg_dm = $msg_dm.'Course: '.$course.'<br>';
+		$msg_dm = $msg_dm.'Campaign: '.$campaign.'<br>';
 		$msg_dm = $msg_dm.'Source: '.$utm_source.'<br>';
 		
 		
 		// smtpmail($subject, $msg, $email, $fullname);
 		smtpmail_dm($subject_dm, $msg_dm, $email, $fullname);
 
-		header("Location: http://".$_SERVER['HTTP_HOST']."/thankyou/?ret=success");	
+		header("Location: http://kidzlearningcentre.kidz-village.ac.th/thankyou/?ret=success");	
 
 	break;
 	case "":
-	header("Location: http://".$_SERVER['HTTP_HOST']."/");
+	header("Location: http://www.kidz-village.ac.th/");
 	break;
 }
 ?>

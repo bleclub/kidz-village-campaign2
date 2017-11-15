@@ -2317,7 +2317,8 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   font-family: 'Mitr', sans-serif;
 }
 #portfolio .portfolio-content {
-  margin-top: -22.2rem;
+  margin-top: -100px;
+  max-width: 700px;
 }
 #portfolio .bricks-wrapper:before, 
 #portfolio .bricks-wrapper:after {
